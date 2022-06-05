@@ -1,13 +1,12 @@
 import React from 'react';
-
-import './App.css';
+import appStyle from './App.module.css'
 
 function App() {
-  return (
-    <div>
+    return (
+        <div className={appStyle.app}>
 
-    </div>
-  );
+        </div>
+    );
 }
 
 export default App;
