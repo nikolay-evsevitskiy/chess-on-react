@@ -1,5 +1,4 @@
 import React, {FC} from 'react';
-import appStyle from '../App.module.css';
 import {Board} from "../models/Board";
 import CellComponent from "./CellComponent";
 
@@ -10,7 +9,7 @@ interface BoardProps {
 
 const BoardComponent: FC<BoardProps> = ({board, setBoard}) => {
     return (
-        <div className={appStyle.board}>
+        <div className='board'>
             {board.cell.map((row, index) =>
                 <React.Fragment key={index}>
                     {row.map(cell =>

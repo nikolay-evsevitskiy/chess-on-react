@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import appStyle from './App.module.css'
 import BoardComponent from "./components/BoardComponent";
 import {Board} from "./models/Board";
 
@@ -16,9 +15,8 @@ function App() {
     }
 
     return (
-        <div className={appStyle.app}>
+        <div className='app'>
             <BoardComponent setBoard={setBoard} board={board}/>
-
         </div>
     );
 }
