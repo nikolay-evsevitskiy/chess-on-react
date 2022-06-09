@@ -1,8 +1,11 @@
 import {Cell} from "./Cell";
 import {Colors} from "./Colors";
+import {Queen} from "./figures/Queen";
+import {Knight} from "./figures/Knight";
+import {Pawn} from "./figures/Pawn";
 
 export class Board {
-    cell: Cell[][] = []
+    cells: Cell[][] = []
 
     public initCells() {
         for (let i = 0; i < 8; i++) {
@@ -14,7 +17,19 @@ export class Board {
                     row.push(new Cell(this, j, i, Colors.WHITE, null)) //White color
                 }
             }
-            this.cell.push(row);
+            this.cells.push(row);
         }
+    }
+
+    public getCell(x: number, y: number) {
+        return this.cells[y][x]
+
+    }
+
+    public addFigures() {
+        new Queen(Colors.WHITE, this.getCell(3, 3))
+        new Knight(Colors.BLACK, this.getCell(1, 7))
+        new Pawn(Colors.WHITE, this.getCell(4, 2))
+
     }
 }
