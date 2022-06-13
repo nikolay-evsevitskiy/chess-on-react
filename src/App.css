@@ -38,3 +38,13 @@
 .white {
     background-color: #f3e0bb;
 }
+.selected {
+    background-color: darkred;
+}
+
+.available {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: green;
+}
