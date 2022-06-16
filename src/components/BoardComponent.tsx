@@ -19,11 +19,11 @@ const BoardComponent: FC<BoardProps> = ({board, setBoard, currentPlayer, swapPla
             selectedCell.moveFigure(cell)
             swapPlayer()
             setSelectedCell(null)
+            updateBoard()
         } else {
             if (cell.figure?.color === currentPlayer?.color) {
                 setSelectedCell(cell)
             }
-            setSelectedCell(cell)
         }
     }
 
